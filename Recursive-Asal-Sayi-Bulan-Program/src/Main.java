@@ -1,31 +1,25 @@
-import java.util.Scanner;
+public class Test
+{
+    public Test()
+    {
+        System.out.printf("1");
+        new Test(10);
+        System.out.printf("5");
+    }
+    public Test(int temp)
+    {
+        System.out.printf("2");
+        new Test(10, 20);
+        System.out.printf("4");
+    }
+    public Test(int data, int temp)
+    {
+        System.out.printf("3");
 
-public class Main {
-
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        // Kullanıcıdan sayı alıyoruz
-        System.out.print("Sayı giriniz: ");
-        int number = input.nextInt();
-
-        if(isPrime(number, number / 2))
-            System.out.println(number + " asal sayıdır.");
-        else
-            System.out.println(number + " asal sayı değildir.");
     }
 
-    static boolean isPrime(int num, int divisor){
-
-        if(num < 2) return false;
-        else if(divisor == 1)
-            return true;
-        else
-        {
-            if(num % divisor == 0) return false;
-
-            else
-                return isPrime(num, divisor - 1);
-        }
+    public static void main(String[] args)
+    {
+        Test obj = new Test();
     }
 }
